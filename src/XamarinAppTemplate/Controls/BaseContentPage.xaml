@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundColor="{DynamicResource PageBackgroundColor}"
+    FlowDirection="{Binding FlowDirection}"
+    xmlns:local="clr-namespace:XamarinAppTemplate"
+    Title="{Binding Title}"
+    Shell.NavBarHasShadow="True"
+    ControlTemplate="{StaticResource MainLayout}"
+    mc:Ignorable="d"
+    x:Class="XamarinAppTemplate.BaseContentPage">
+
+    <Shell.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="60" />
+            </Grid.ColumnDefinitions>
+            <Label
+                VerticalOptions="Center"
+                FontSize="Title"
+                Grid.Column="0"
+                LineBreakMode="TailTruncation"
+                HorizontalOptions="Start"
+                Text="{Binding Title}" />
+
+            <Button
+                Command="{Binding SwitchDirectionCommand}"
+                Text="{Binding LanguageText}"
+                FontSize="Micro"
+                VerticalOptions="Center"
+                Margin="10,0"
+                WidthRequest="30"
+                HorizontalOptions="End"
+                Grid.Column="1" />
+        </Grid>
+    </Shell.TitleView>
+</ContentPage>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:local="clr-namespace:XamarinAppTemplate"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:XamarinAppTemplate.Controls"
+    mc:Ignorable="d"
+    xmlns:beh="clr-namespace:XamarinAppTemplate.Behaviors"
+    x:Class="XamarinAppTemplate.Views.HomePage">
+
+    <ContentPage.Content>
+        <StackLayout
+            Spacing="10"
+            Padding="10">
+
+            <Label
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="Welcome to balbarak Template" />
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="  XamarinAppTemplate" />
+                            <Span
+                                FontAttributes="Bold"
+                                Text=" v1.0 " />
+                            <Span Text="2019" />
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Button
+                Command="{Binding LoginCommand}"
+                Text="Login" />
+
+            <Button
+                Style="{StaticResource btn-danger}"
+                Text="Danger" />
+
+            <Button
+                Style="{StaticResource btn-success}"
+                Text="Success" />
+
+            <Button
+                Style="{StaticResource btn-warning}"
+                Text="Warning" />
+
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</local:BaseContentPage>
