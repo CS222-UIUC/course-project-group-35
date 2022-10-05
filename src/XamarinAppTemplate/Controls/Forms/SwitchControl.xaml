@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Name="self"
+    x:Class="XamarinAppTemplate.SwitchControl">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Text="{Binding Text, Source={x:Reference self}}"
+            TextColor="{Binding TextColor, Source={x:Reference self}}"
+            VerticalOptions="Center">
+            <Label.Triggers>
+                <DataTrigger
+                    TargetType="Label"
+                    Value="true"
+                    Binding="{Binding Source={x:Reference switchControl}, Path=IsToggled}">
+                    <Setter Property="Text" Value="{Binding ToggledText, Source={x:Reference self}}" />
+                    <Setter Property="TextColor" Value="{Binding ToggledTextColor, Source={x:Reference self}}" />
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+        <Switch
+            x:Name="switchControl"
+            IsToggled="{Binding IsToggled, Source={x:Reference self}}"
+            Grid.Column="1"
+            HorizontalOptions="End"
+            VerticalOptions="Center" />
+
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnTapped" />
+        </Grid.GestureRecognizers>
+    </Grid>
+</ContentView>

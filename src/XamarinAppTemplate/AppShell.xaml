@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resx="clr-namespace:XamarinAppTemplate.Resx"
+    mc:Ignorable="d"
+    xmlns:views="clr-namespace:XamarinAppTemplate.Views"
+    xmlns:local="clr-namespace:XamarinAppTemplate"
+    FlowDirection="{Binding FlowDirection}"
+    FlyoutBehavior="Flyout"
+    FlyoutBackgroundColor="{DynamicResource FlyoutBackgroundColor}"
+    Shell.ItemTemplate="{StaticResource ShellItemTemplate}"
+    Shell.MenuItemTemplate="{StaticResource ShellItemTemplate}"
+    FlyoutHeaderTemplate="{DataTemplate views:HeaderView}"
+    x:Name="mainShell"
+    FlyoutHeaderBehavior="CollapseOnScroll"
+    Title="XamarinAppTemplate"
+    x:Class="XamarinAppTemplate.AppShell">
+
+
+
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Themes}">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.FEATHER}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            Route="theme"
+            Title="Theme"
+            ContentTemplate="{DataTemplate views:ThemePage}" />
+    </FlyoutItem>
+
+
+
+
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Demo_Typography}">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.FONT}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            Route="typography"
+            ContentTemplate="{DataTemplate views:TypographyPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Demo_Buttons}">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.LIST_OL}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            Route="buttons"
+            ContentTemplate="{DataTemplate views:ButtonPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Demo_Forms}">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.LIST}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+
+        <ShellContent
+            Route="forms"
+            ContentTemplate="{DataTemplate views:FormPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Tabs}">
+
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.TABLE}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+
+
+        <ShellContent
+            Route="themeTab"
+            Title="{x:Static resx:AppResource.Themes}"
+            ContentTemplate="{DataTemplate views:ThemePage}">
+            <ShellContent.Icon>
+                <local:FontIcon Glyph="{Static local:Icons.FEATHER}" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent
+            Route="controlTab"
+            Title="{x:Static resx:AppResource.Controls}"
+            ContentTemplate="{DataTemplate views:ControlPage}">
+            <ShellContent.Icon>
+                <local:FontIcon Glyph="{Static local:Icons.COG}" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+        <ShellContent
+            Route="countryTab"
+            Title="{x:Static resx:AppResource.Countries}"
+            ContentTemplate="{DataTemplate views:CountryPage}">
+            <ShellContent.Icon>
+                <local:FontIcon Glyph="{Static local:Icons.LIST}" />
+            </ShellContent.Icon>
+        </ShellContent>
+
+
+    </FlyoutItem>
+
+
+
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Countries}">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.GLOBE_AMERICAS}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            Route="country"
+            Title="{x:Static resx:AppResource.Countries}"
+            ContentTemplate="{DataTemplate views:CountryPage}" />
+    </FlyoutItem>
+
+
+
+    <FlyoutItem
+        Route="main"
+        Title="{x:Static resx:AppResource.Home}">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.HOME}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            Route="home"
+            Title="Home"
+            ContentTemplate="{DataTemplate views:HomePage}" />
+    </FlyoutItem>
+
+    <FlyoutItem
+        Route="main"
+        Title="About">
+        <FlyoutItem.Icon>
+            <local:FontIcon
+                Glyph="{Static local:Icons.INFO_CIRCLE}"
+                Color="{DynamicResource FlyoutTextColor}" />
+        </FlyoutItem.Icon>
+        <ShellContent
+            Route="about"
+            ContentTemplate="{DataTemplate views:AboutPage}" />
+    </FlyoutItem>
+
+</Shell>

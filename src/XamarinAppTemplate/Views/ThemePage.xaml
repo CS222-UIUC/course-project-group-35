@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:BaseContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:svg="clr-namespace:Xamarin.Forms.Svg;assembly=SvgImageSource"
+    xmlns:local="clr-namespace:XamarinAppTemplate"
+    xmlns:vm="clr-namespace:XamarinAppTemplate.ViewModels"
+    xmlns:touch="clr-namespace:TouchEffect;assembly=TouchEffect"
+    xmlns:resx="clr-namespace:XamarinAppTemplate.Resx"
+    mc:Ignorable="d"
+    x:DataType="vm:ThemeViewModel"
+    x:Class="XamarinAppTemplate.Views.ThemePage">
+
+
+    <ScrollView>
+        <StackLayout Spacing="10">
+
+            <!--<local:Portlet>
+                <local:Portlet.Header>
+                    <Label Text="Svg Icons" />
+                </local:Portlet.Header>
+                <local:Portlet.Body>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Spacing="10">
+                        <Label TextColor="{DynamicResource BrandColor}" />
+
+                        <Image HeightRequest="30">
+                            <Image.Source>
+                                <FontImageSource
+                                    Glyph="{Static local:Icons.CALCULATOR}"
+                                    Color="{DynamicResource BrandColor}"
+                                    FontFamily="{StaticResource FA-Solid}" />
+                            </Image.Source>
+                        </Image>
+
+                        <Image
+                            HeightRequest="30"
+                            Source="{local:SvgImageResource Color={StaticResource BrandColor},
+                                                            Source={x:Static local:SvgIcons.CAR}}" />
+
+                        <Image
+                            HeightRequest="30"
+                            Source="{local:SvgImageResource Color=Blue,
+                                                            Source={x:Static local:SvgIcons.PLUS}}" />
+
+                        <Image
+                            HeightRequest="30"
+                            Source="{local:SvgImageResource Color=Red,
+                                                            Source={x:Static local:SvgIcons.PHONE}}" />
+
+                    </StackLayout>
+                </local:Portlet.Body>
+            </local:Portlet>
+
+            <local:Portlet>
+
+                <local:Portlet.Header>
+                    <Grid>
+                        <Label Text="Font Icon" />
+                    </Grid>
+                </local:Portlet.Header>
+
+                <local:Portlet.Body>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Spacing="10">
+
+                        <Image>
+                            <Image.Source>
+                                <local:FontIcon
+                                    Color="{DynamicResource BrandColor}"
+                                    Glyph="{x:Static local:Icons.PLUS}" />
+                            </Image.Source>
+                        </Image>
+
+                        <Image>
+                            <Image.Source>
+                                <local:FontIcon
+                                    Color="{DynamicResource BrandColor}"
+                                    Glyph="{x:Static local:Icons.CALCULATOR}" />
+                            </Image.Source>
+                        </Image>
+
+                        <Image>
+                            <Image.Source>
+                                <local:FontIcon
+                                    Color="{DynamicResource BrandColor}"
+                                    Glyph="{x:Static local:Icons.CALENDAR}" />
+                            </Image.Source>
+                        </Image>
+
+                        <Image>
+                            <Image.Source>
+                                <local:FontIcon
+                                    Color="{DynamicResource BrandColor}"
+                                    Glyph="{x:Static local:Icons.PHONE}" />
+                            </Image.Source>
+                        </Image>
+                        <Image>
+                            <Image.Source>
+                                <local:FontIcon
+                                    Color="{DynamicResource BrandColor}"
+                                    Glyph="{x:Static local:Icons.MINUS}" />
+                            </Image.Source>
+                        </Image>
+                        <Image>
+                            <Image.Source>
+                                <local:FontIcon
+                                    Color="{DynamicResource BrandColor}"
+                                    Glyph="{x:Static local:Icons.BOOK}" />
+                            </Image.Source>
+                        </Image>
+                    </StackLayout>
+                </local:Portlet.Body>
+            </local:Portlet>-->
+
+            <local:Portlet>
+
+                <local:Portlet.Header>
+                    <Label Text="{x:Static resx:AppResource.Demo_Modals}" />
+                </local:Portlet.Header>
+
+                <local:Portlet.Body>
+                    <StackLayout Spacing="10">
+                        <Button
+                            Command="{Binding ShowModalCommand}"
+                            Style="{DynamicResource btn-brand}"
+                            Text="{x:Static resx:AppResource.Demo_Modals}" />
+                        <Button
+                            Command="{Binding ShowSuccessModalCommand}"
+                            Style="{DynamicResource btn-success}"
+                            Text="{x:Static resx:AppResource.Demo_SuccessModal}" />
+                        <Button
+                            Command="{Binding ShowErrorModalCommand}"
+                            Style="{DynamicResource btn-danger}"
+                            Text="{x:Static resx:AppResource.Demo_ErrorModal}" />
+                    </StackLayout>
+                </local:Portlet.Body>
+            </local:Portlet>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <local:ButtonIcon
+                    Text="{x:Static resx:AppResource.Controls}"
+                    IconColor="{DynamicResource BrandColor}"
+                    TouchColor="{DynamicResource BrandColor}"
+                    TextColor="{DynamicResource BrandColor}"
+                    Icon="{x:Static local:Icons.USER_COG}" />
+
+                <local:ButtonIcon
+                    Grid.Column="1"
+                    IconColor="{DynamicResource BrandColor}"
+                    Icon="{x:Static local:Icons.PHONE_SLASH}"
+                    Text="{x:Static resx:AppResource.PhoneCode}" />
+            </Grid>
+            <local:Portlet>
+
+                <local:Portlet.Header>
+                    <Label Text="{x:Static resx:AppResource.Demo_Loading}" />
+
+                </local:Portlet.Header>
+
+                <local:Portlet.Body>
+                    <Grid>
+                        <Button
+                            Command="{Binding StartLoadingCommand}"
+                            Text="{x:Static resx:AppResource.Demo_ShowLoading}" />
+                    </Grid>
+                </local:Portlet.Body>
+            </local:Portlet>
+
+            <local:Portlet>
+
+                <local:Portlet.Header>
+                    <Grid>
+                        <Label Text="Toaster" />
+                    </Grid>
+                </local:Portlet.Header>
+
+                <local:Portlet.Body>
+                    <Grid>
+                        <Button
+                            Command="{Binding ShowToasterCommand}"
+                            Text="Start Toaster" />
+                    </Grid>
+                </local:Portlet.Body>
+            </local:Portlet>
+
+
+        </StackLayout>
+    </ScrollView>
+
+</local:BaseContentPage>
