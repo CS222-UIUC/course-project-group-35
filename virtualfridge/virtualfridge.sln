@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1703.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "virtualfridge", "virtualfridge\virtualfridge.csproj", "{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhone = Release|iPhone
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Release|iPhone.ActiveCfg = Release|iPhone
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Release|iPhone.Build.0 = Release|iPhone
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{19C0D044-DE34-4CB7-B7D1-2F03DA1F3A18}.Debug|iPhone.Build.0 = Debug|iPhone
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B500A78A-0C6F-4EF8-862B-09AA737C5163}
+	EndGlobalSection
+EndGlobal
