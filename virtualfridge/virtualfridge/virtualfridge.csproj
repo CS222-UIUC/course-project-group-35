@@ -91,6 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\app_logo.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
@@ -117,6 +119,9 @@
       <DependentUpon>DataViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="ModelController.cs" />
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

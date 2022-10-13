@@ -1,4 +1,4 @@
-﻿using Foundation;
+using Foundation;
 using UIKit;
 
 namespace virtualfridge
@@ -6,7 +6,7 @@ namespace virtualfridge
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register ("AppDelegate")]
-    public class AppDelegate : UIResponder, IUIApplicationDelegate {
+    public partial class AppDelegate : UIResponder, IUIApplicationDelegate {
     
         [Export("window")]
         public UIWindow Window { get; set; }
