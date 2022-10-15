@@ -105,6 +105,7 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include=".DS_Store" />
+    <None Include="Info 2.plist" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
