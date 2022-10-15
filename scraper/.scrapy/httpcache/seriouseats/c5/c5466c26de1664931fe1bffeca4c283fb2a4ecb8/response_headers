@@ -1,0 +1,20 @@
+X-Abt-Application-Version: 5.194.0
+Strict-Transport-Security: max-age=15552000
+Referrer-Policy: no-referrer-when-downgrade
+X-Content-Type-Options: nosniff
+Content-Security-Policy: frame-ancestors 'self' *.specless.io *.specless.tech http://*.seo.aws.about.com https://*.seo.aws.about.com http://*.dotdash.com https://*.dotdash.com *.seriouseats.com
+X-Content-Security-Policy: frame-ancestors 'self' *.specless.io *.specless.tech http://*.seo.aws.about.com https://*.seo.aws.about.com http://*.dotdash.com https://*.dotdash.com *.seriouseats.com
+Set-Cookie: Mint=n4e48a3ba85624507b2f44ead237a244f08; Path=/; Domain=.seriouseats.com; Expires=Sat, 15-Oct-2022 08:43:50 GMT; Max-Age=1800
+Set-Cookie: pc=2; Path=/; Domain=.seriouseats.com; Expires=Sat, 15-Oct-2022 08:43:50 GMT; Max-Age=1800
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Content-Type: text/xml;charset=utf-8
+Cache-Control: max-age=86400
+Link: <//www.seriouseats.com/static/5.194.0/fonts/SpaceGrotesk-SemiBold.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin; nopush, <//www.seriouseats.com/static/5.194.0/fonts/Inter-Regular-subset.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin; nopush, <//www.seriouseats.com/static/5.194.0/fonts/Inter-SemiBold-subset.woff2>; rel=preload; as=font; type="font/woff2"; crossorigin; nopush, <//www.googletagmanager.com/gtm.js?id=GTM-5P3SZGS>; rel=preload; as=script; nopush, <//www.google-analytics.com/analytics.js>; rel=preload; as=script; nopush, <//securepubads.g.doubleclick.net/tag/js/gpt.js>; rel=preload; as=script; nopush
+Via: 1.1 google, 1.1 varnish, 1.1 varnish
+Accept-Ranges: bytes
+Nel: {"report_to":"network-errors","max_age":2592000,"success_fraction":0,"failure_fraction":1.0, "include_subdomains": true}
+Report-To: {"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://r.3gl.net/hawklogserver/5463/re.p"}]}
+Date: Sat, 15 Oct 2022 08:13:50 GMT
+X-Served-By: cache-bfi-krnt7300027-BFI, cache-chi-klot8100080-CHI
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0

@@ -1,0 +1,5 @@
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en
+User-Agent: Scrapy/2.6.3 (+https://scrapy.org)
+Accept-Encoding: gzip, deflate
+Cookie: TMog=n4e48a3ba85624507b2f44ead237a244f08; globalTI_SID=815ac8a2-958e-4328-8782-e8a170086d07; Mint=n4e48a3ba85624507b2f44ead237a244f08; pc=1

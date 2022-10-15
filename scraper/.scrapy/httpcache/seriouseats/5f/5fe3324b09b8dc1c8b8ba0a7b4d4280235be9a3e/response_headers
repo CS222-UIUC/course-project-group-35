@@ -1,0 +1,16 @@
+Content-Length: 0
+X-Abt-Application-Version: 5.194.0
+Strict-Transport-Security: max-age=15552000
+Referrer-Policy: no-referrer-when-downgrade
+X-Content-Type-Options: nosniff
+Content-Security-Policy: frame-ancestors 'self' *.specless.io *.specless.tech http://*.seo.aws.about.com https://*.seo.aws.about.com http://*.dotdash.com https://*.dotdash.com *.seriouseats.com
+X-Content-Security-Policy: frame-ancestors 'self' *.specless.io *.specless.tech http://*.seo.aws.about.com https://*.seo.aws.about.com http://*.dotdash.com https://*.dotdash.com *.seriouseats.com
+Location: https://www.seriouseats.com/robots.txt
+Via: 1.1 google, 1.1 varnish, 1.1 varnish
+Accept-Ranges: bytes
+Nel: {"report_to":"network-errors","max_age":2592000,"success_fraction":0,"failure_fraction":1.0, "include_subdomains": true}
+Report-To: {"group":"network-errors","max_age":2592000,"endpoints":[{"url":"https://r.3gl.net/hawklogserver/5463/re.p"}]}
+Date: Sat, 15 Oct 2022 08:13:31 GMT
+X-Served-By: cache-bfi-kbfi7400055-BFI, cache-chi-klot8100030-CHI
+X-Cache: MISS, MISS
+X-Cache-Hits: 0, 0
