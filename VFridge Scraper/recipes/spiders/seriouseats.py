@@ -34,4 +34,16 @@ class SeriouseatsSpider(scrapy.spiders.SitemapSpider):
             "url" : response.url,
             "title" : temp[0]['headline'],
             "ingredients" : ingredients,
+            "nutrition" : {
+                "calories" : temp[0]["nutrition"]["calories"],
+                "protein" : temp[0]["nutrition"]["proteinContent"],
+                "fat" : temp[0]["nutrition"]["fatContent"], 
+                "carbohydrate" : temp[0]["nutrition"]["carbohydrateContent"],
+                "sugar" : temp[0]["nutrition"]["sugarContent"],
+                "cholesterol" : temp[0]["nutrition"]["cholesterolContent"],
+                "fiber" : temp[0]["nutrition"]["fiberContent"],
+                "sodium" : temp[0]["nutrition"]["sodiumContent"],
+                "saturated fat" : temp[0]["nutrition"]["saturatedFatContent"],
+                "unsaturated fat" : temp[0]["nutrition"]["unsaturatedFatContent"]
+            }
             }
