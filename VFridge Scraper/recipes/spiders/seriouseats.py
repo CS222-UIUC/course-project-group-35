@@ -19,21 +19,21 @@ class SeriouseatsSpider(scrapy.spiders.SitemapSpider):
         if temp[0]['@type'] != ['Recipe']:
             return
 
-        ingredients = ""
-        idx = 0
-        print(type(temp[0]['recipeIngredient']))
-        for ingredient in temp[0]['recipeIngredient']:
-            idx += 1
-            ingredients += ingredient 
-            if (idx == (len(temp[0]['recipeIngredient']) - 1)):
-                break
-            ingredients += " -> "
-        print(ingredients)
+        # ingredients = ""
+        # idx = 0
+        # print(type(temp[0]['recipeIngredient']))
+        # for ingredient in temp[0]['recipeIngredient']:
+        #     idx += 1
+        #     ingredients += ingredient 
+        #     if (idx == (len(temp[0]['recipeIngredient']) - 1)):
+        #         break
+        #     ingredients += " -> "
+        # print(ingredients)
         
         yield {
             "url" : response.url,
             "title" : temp[0]['headline'],
-            "ingredients" : ingredients,
+            "ingredients" : temp[0]['recipeIngredient'],
             "nutrition" : {
                 "calories" : temp[0]["nutrition"]["calories"],
                 "protein" : temp[0]["nutrition"]["proteinContent"],
