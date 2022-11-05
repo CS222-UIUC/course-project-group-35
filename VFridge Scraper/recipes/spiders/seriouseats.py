@@ -31,19 +31,19 @@ class SeriouseatsSpider(scrapy.spiders.SitemapSpider):
         # print(ingredients)
         
         yield {
-            "url" : response.url,
-            "title" : temp[0]['headline'],
-            "ingredients" : temp[0]['recipeIngredient'],
-            "nutrition" : {
-                "calories" : temp[0]["nutrition"]["calories"],
-                "protein" : temp[0]["nutrition"]["proteinContent"],
-                "fat" : temp[0]["nutrition"]["fatContent"], 
-                "carbohydrate" : temp[0]["nutrition"]["carbohydrateContent"],
-                "sugar" : temp[0]["nutrition"]["sugarContent"],
-                "cholesterol" : temp[0]["nutrition"]["cholesterolContent"],
-                "fiber" : temp[0]["nutrition"]["fiberContent"],
-                "sodium" : temp[0]["nutrition"]["sodiumContent"],
-                "saturated fat" : temp[0]["nutrition"]["saturatedFatContent"],
-                "unsaturated fat" : temp[0]["nutrition"]["unsaturatedFatContent"]
+            "URL" : response.url,
+            "Title" : temp[0]['headline'],
+            "Ingredients" : temp[0]['recipeIngredient'],
+            "Nutrition" : {
+                "Calories" : temp[0]["nutrition"]["calories"],
+                "Protein" : temp[0]["nutrition"]["proteinContent"],
+                "Fat" : temp[0]["nutrition"]["fatContent"], 
+                "Carbohydrates" : temp[0]["nutrition"]["carbohydrateContent"],
+                "Sugar" : temp[0]["nutrition"]["sugarContent"],
+                "Cholesterol" : temp[0]["nutrition"]["cholesterolContent"],
+                "Fiber" : temp[0]["nutrition"]["fiberContent"],
+                "Sodium" : temp[0]["nutrition"]["sodiumContent"],
+                "Saturated Fat" : temp[0]["nutrition"]["saturatedFatContent"],
+                "Unsaturated Fat" : temp[0]["nutrition"]["unsaturatedFatContent"]
             }
             }
