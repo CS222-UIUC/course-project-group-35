@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-1012.3076923076923" y="565.16587677725113"/>
         </scene>
-        <!--View Controller-->
+        <!--Virtual Fridge-->
         <scene sceneID="1hK-my-SOs">
             <objects>
-                <viewController id="RkQ-vb-kQE" sceneMemberID="viewController">
+                <viewController title="Virtual Fridge" id="RkQ-vb-kQE" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WmG-MD-r1X"/>
                     <size key="freeformSize" width="390" height="844"/>
                 </viewController>
