@@ -18,8 +18,9 @@ namespace virtualfridge
         public DataViewController GetViewController(int index, UIStoryboard storyboard)
         {
             if (index >= pageData.Count)
+            {
                 return null;
-
+            }
             // Create a new view controller and pass suitable data.
             var dataViewController = (DataViewController)storyboard.InstantiateViewController("DataViewController");
             dataViewController.DataObject = pageData[index];
@@ -39,8 +40,9 @@ namespace virtualfridge
             int index = IndexOf((DataViewController)referenceViewController);
 
             if (index == -1 || index == pageData.Count - 1)
+            {
                 return null;
-
+            }
             return GetViewController(index + 1, referenceViewController.Storyboard);
         }
 
@@ -49,8 +51,9 @@ namespace virtualfridge
             int index = IndexOf((DataViewController)referenceViewController);
 
             if (index == -1 || index == 0)
+            {
                 return null;
-
+            }
             return GetViewController(index - 1, referenceViewController.Storyboard);
         }
 
