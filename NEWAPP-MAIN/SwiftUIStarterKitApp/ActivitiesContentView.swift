@@ -94,7 +94,7 @@ struct ActivitiesContentView: View {
                         }
                         .padding(.top, 20)
                         
-                        Text("\(self.activtiesData.activities[self.selectedActivity.index].activityNameLabel) Regions")
+                        Text("\(self.activtiesData.activities[self.selectedActivity.index].activityNameLabel) Reccomendations")
                             .font(.system(size: 20))
                             .padding(.leading, 30)
                             .padding(.top, 10)
