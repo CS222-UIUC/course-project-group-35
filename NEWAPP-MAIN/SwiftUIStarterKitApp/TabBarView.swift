@@ -30,7 +30,7 @@ struct TabbarView: View {
                   }
                    .tag(2)
                     .tabItem {
-                    Image("profile-glyph-icon")
+                    Image("search-icon-glyph2")
                             .resizable()
                     Text("Search")
                 }
