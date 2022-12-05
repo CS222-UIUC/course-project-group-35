@@ -97,7 +97,7 @@ struct ActivitiesContentView: View {
                         Text("Our \(self.activtiesData.activities[self.selectedActivity.index].activityNameLabel) Favourites!")
                             .font(.system(size: 20))
                             .padding(.leading, 30)
-                            .padding(.top, 10)
+                            .padding(.top, 100)
                         
                         ScrollView(.horizontal, showsIndicators: false) {
                                     HStack (spacing: 10) {
@@ -107,7 +107,7 @@ struct ActivitiesContentView: View {
                                                 self.isShowing = true
                                             }) {
                                                 ShopBestSellerViews(activityPlaces: item)
-                                                                    .frame(width: 155, height: 225)
+                                                                    .frame(width: 155, height: 250)
                                             }
                                         }
                                         
@@ -117,16 +117,16 @@ struct ActivitiesContentView: View {
                                 
                         }
                         
-                        VStack (spacing: 20) {
-                            ForEach(self.activtiesData.activitiesCollection[self.selectedActivity.index].activityResources, id: \.id) { item in
-                                ShopNewProductViews(activityResources: item)
-                                         .frame(width: g.size.width - 60, height: g.size.width - 60)
-                            }
-                        }.padding(.leading, 30)
+//                        VStack (spacing: 20) {
+//                            ForEach(self.activtiesData.activitiesCollection[self.selectedActivity.index].activityResources, id: \.id) { item in
+//                                ShopNewProductViews(activityResources: item)
+//                                         .frame(width: g.size.width - 60, height: g.size.width - 60)
+//                            }
+//                        }.padding(.leading, 30)
                         
                         
                     }
-                    .navigationBarTitle("Activities")
+                    .navigationBarTitle("Home")
                     .navigationBarItems(trailing:
                     Button(action: {
                         self.settings.loggedIn = false
@@ -206,47 +206,48 @@ struct ShopPromotionBannerView: View {
 }
 
 
-struct ShopNewProductViews: View {
-    var activityResources: ActivityResource
-    
-    var body: some View {
-        GeometryReader { g in
-            ZStack {
-                VStack (alignment: .leading){
-                    Text(self.activityResources.resourceName)
-                        .padding(.top, 18)
-                        .padding(.leading, 18)
-                        .font(.system(size: 20, weight: .bold, design: Font.Design.default))
-                        .foregroundColor(Color.black)
-                    Text(self.activityResources.resourceDescription)
-                        .padding(.leading, 18)
-                        .padding(.trailing, 18)
-                        .font(.system(size: 14))
-                        .foregroundColor(Color.black)
-                    
-                        
-                    ScrollView (.horizontal, showsIndicators: false) {
-                        HStack (spacing: 10) {
-                            
-                            ForEach(self.activityResources.resources, id: \.id) { item in
-                                ActivityResourceItems(resourceItems: item)
-                                                    .frame(width: 150, height: 200)
-                            }
-                            
-                        }.padding(.leading, 18)
-                        .padding(.trailing, 18)
-                            .padding(.top, 25)
-                    }
-                    
-                     Spacer()
-                }
-                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
-                .cornerRadius(10)
-                
-            }
-        }
-    }
+//struct ShopNewProductViews: View {
+//    var activityResources: ActivityResource
+//
+//    var body: some View {
+//        GeometryReader { g in
+//            ZStack {
+//                VStack (alignment: .leading){
+//                    Text(self.activityResources.resourceName)
+//                    // Text("BITCH")
+//                        .padding(.top, 18)
+//                        .padding(.leading, 18)
+//                        .font(.system(size: 20, weight: .bold, design: Font.Design.default))
+//                        .foregroundColor(Color.black)
+//                    Text(self.activityResources.resourceDescription)
+//                        .padding(.leading, 18)
+//                        .padding(.trailing, 18)
+//                        .font(.system(size: 14))
+//                        .foregroundColor(Color.black)
+//
+//
+//                    ScrollView (.horizontal, showsIndicators: false) {
+//                        HStack (spacing: 10) {
+//
+//                            ForEach(self.activityResources.resources, id: \.id) { item in
+//                                ActivityResourceItems(resourceItems: item)
+//                                                    .frame(width: 150, height: 200)
+//                            }
+//
+//                        }.padding(.leading, 18)
+//                        .padding(.trailing, 18)
+//                            .padding(.top, 25)
+//                    }
+//
+//                     Spacer()
+//                }
+//                }.frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+//                .background(Color(red: 242 / 255, green: 242 / 255, blue: 242 / 255))
+//                .cornerRadius(10)
+//
+//            }
+//        }
+//    }
 
 struct ActivityResourceItems: View {
     var resourceItems: ActivityResourcesItem

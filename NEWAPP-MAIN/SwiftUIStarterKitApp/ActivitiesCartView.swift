@@ -3,6 +3,20 @@
 import SwiftUI
 import Combine
 
+
+
+//static let activities: [ActivitiesItem] = [
+//    ActivitiesItem(id: 0, activityName: "BREAKFAST", activityNameLabel: "Breakfast", activityImage: "breakfast", selectedActivity: false),
+//    ActivitiesItem(id: 1, activityName: "LUNCH", activityNameLabel: "Snowboarding", activityImage: "lunch", selectedActivity: false),
+//    ActivitiesItem(id: 2, activityName: "DINNER", activityNameLabel: "Hiking", activityImage: "dinner", selectedActivity: false)
+//
+//]
+
+
+
+
+
+
 class ActivitiesCart: ObservableObject {
     let objectWillChange = PassthroughSubject<Void, Never>()
     
@@ -66,7 +80,7 @@ struct ActivitiesCartView: View {
                 Spacer()
                 ShoppingFinalInfoView(ShoppingCartItemsData: self.ShoppingCartItemsData)
                 Button(action: {
-                    let newelement = ActivitiesCartItem(itemID: String(Int.random(in: 6 ..< 100)), itemName: "DSLR", itemPrice: 500, itemColor: "Black", itemManufacturer: "Nikon", itemImage: "4")
+                    let newelement = ActivitiesCartItem(itemID: String(Int.random(in: 6 ..< 100)), itemName: "Mayonaise", itemPrice: 94, itemColor: "White", itemManufacturer: "Hellmann's", itemImage: "Mayo")
                         self.ShoppingCartItemsData.ActivitiesCartArray.append(newelement)
                     }) {
                         HStack {
@@ -98,7 +112,7 @@ struct ShoppingFinalInfoView: View {
                         Spacer()
                     }
                     Text("Total Calories")
-                        .font(.system(size: 12))
+                        .font(.system(size: 16))
 //                    Text("from $225")
 //                        .font(.system(size: 12))
                 }.frame(width: geometry.size.width / 2 - 12)
@@ -144,17 +158,17 @@ struct ShoppingCartCellView: View {
                         HStack {
                             Spacer()
                         }
-                        // Text("\(self.shoppingCartItem.itemName)")
-                        Text("Pickles")
+                        Text("\(self.shoppingCartItem.itemName)")
+                        // Text("Pickles")
                             .lineLimit(nil)
                             .foregroundColor(.primary)
-                        // Text("\(self.shoppingCartItem.itemManufacturer)")
-                        Text("Vlasic")
+                        Text("\(self.shoppingCartItem.itemManufacturer)")
+                        // Text("Vlasic")
                             .foregroundColor(.primary)
                             .font(.system(size: 12))
                             .foregroundColor(Color.gray)
-                        // Text("\(self.shoppingCartItem.itemColor)")
-                        Text("Green")
+                        Text("\(self.shoppingCartItem.itemColor)")
+                        // Text("Green")
                             .foregroundColor(.primary)
                             .font(.system(size: 12))
                             .foregroundColor(Color.gray)
@@ -167,7 +181,7 @@ struct ShoppingCartCellView: View {
                             Spacer()
                         }
                         Text("\(self.shoppingCartItem.itemPrice) calories")
-                            .font(.system(size: 16))
+                            .font(.system(size: 12))
                             .foregroundColor(Color.black)
                             .padding(.trailing, 15)
                            
