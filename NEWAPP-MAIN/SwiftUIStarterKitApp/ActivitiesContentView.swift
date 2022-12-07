@@ -92,7 +92,7 @@ struct ActivitiesContentView: View {
                             .padding(.trailing, 30)
                             .padding(.bottom, 10)
                         }
-                        .padding(.top, 20)
+                         .padding(.top, 20)
                         
                         Text("Our \(self.activtiesData.activities[self.selectedActivity.index].activityNameLabel) Favourites!")
                             .font(.system(size: 20))
