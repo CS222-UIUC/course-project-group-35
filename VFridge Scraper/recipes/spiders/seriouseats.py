@@ -19,31 +19,31 @@ class SeriouseatsSpider(scrapy.spiders.SitemapSpider):
         if temp[0]['@type'] != ['Recipe']:
             return
 
-        ingredients = ""
-        idx = 0
-        print(type(temp[0]['recipeIngredient']))
-        for ingredient in temp[0]['recipeIngredient']:
-            idx += 1
-            ingredients += ingredient 
-            if (idx == (len(temp[0]['recipeIngredient']) - 1)):
-                break
-            ingredients += " -> "
-        print(ingredients)
+        # ingredients = ""
+        # idx = 0
+        # print(type(temp[0]['recipeIngredient']))
+        # for ingredient in temp[0]['recipeIngredient']:
+        #     idx += 1
+        #     ingredients += ingredient 
+        #     if (idx == (len(temp[0]['recipeIngredient']) - 1)):
+        #         break
+        #     ingredients += " -> "
+        # print(ingredients)
         
         yield {
-            "url" : response.url,
-            "title" : temp[0]['headline'],
-            "ingredients" : ingredients,
-            "nutrition" : {
-                "calories" : temp[0]["nutrition"]["calories"],
-                "protein" : temp[0]["nutrition"]["proteinContent"],
-                "fat" : temp[0]["nutrition"]["fatContent"], 
-                "carbohydrate" : temp[0]["nutrition"]["carbohydrateContent"],
-                "sugar" : temp[0]["nutrition"]["sugarContent"],
-                "cholesterol" : temp[0]["nutrition"]["cholesterolContent"],
-                "fiber" : temp[0]["nutrition"]["fiberContent"],
-                "sodium" : temp[0]["nutrition"]["sodiumContent"],
-                "saturated fat" : temp[0]["nutrition"]["saturatedFatContent"],
-                "unsaturated fat" : temp[0]["nutrition"]["unsaturatedFatContent"]
+            "URL" : response.url,
+            "Title" : temp[0]['headline'],
+            "Ingredients" : temp[0]['recipeIngredient'],
+            "Nutritional Information" : {
+                "Calories" : temp[0]["nutrition"]["calories"],
+                "Protein" : temp[0]["nutrition"]["proteinContent"],
+                "Fat" : temp[0]["nutrition"]["fatContent"], 
+                "Saturated Fat" : temp[0]["nutrition"]["saturatedFatContent"],
+                "Unsaturated Fat" : temp[0]["nutrition"]["unsaturatedFatContent"],
+                "Carbohydrates" : temp[0]["nutrition"]["carbohydrateContent"],
+                "Sugar" : temp[0]["nutrition"]["sugarContent"],
+                "Cholesterol" : temp[0]["nutrition"]["cholesterolContent"],
+                "Fiber" : temp[0]["nutrition"]["fiberContent"],
+                "Sodium" : temp[0]["nutrition"]["sodiumContent"]
             }
             }
