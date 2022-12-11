@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:XamarinAppTemplate"
+    mc:Ignorable="d"
+    x:Class="XamarinAppTemplate.App">
+    <Application.Resources>
+
+
+
+        <ResourceDictionary Source="Styles/FontStyle.xaml" />
+        <ResourceDictionary Source="Themes/LightTheme.xaml" />
+        <ResourceDictionary Source="Styles/AppStyle.xaml" />
+
+
+        <local:IconToSvgConverter x:Key="IconToSvg" />
+
+        <ControlTemplate x:Key="MainLayout">
+            <Grid Padding="0">
+
+                <ContentPresenter Padding="10,10,10,0" />
+
+                <local:Loading IsBusy="{TemplateBinding BindingContext.IsBusy}" />
+            </Grid>
+        </ControlTemplate>
+
+
+
+    </Application.Resources>
+</Application>
